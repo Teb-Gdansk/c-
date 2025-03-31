@@ -1,0 +1,99 @@
+/// <summary>
+/// Reprezentuje produkt w systemie zarządzania magazynem.
+/// </summary>
+public class Product
+{
+    /// <summary>
+    /// Pobiera lub ustawia nazwę produktu.
+    /// </summary>
+    public string Name { get; set; }
+
+    /// <summary>
+    /// Pobiera lub ustawia ilość produktu w magazynie.
+    /// </summary>
+    public int Quantity { get; set; }
+
+    /// <summary>
+    /// Pobiera lub ustawia cenę jednostkową produktu.
+    /// </summary>
+    public double UnitPrice { get; set; }
+
+    /// <summary>
+    /// Inicjalizuje nową instancję klasy Product.
+    /// </summary>
+    /// <param name="name">Nazwa produktu.</param>
+    /// <param name="quantity">Ilość produktu.</param>
+    /// <param name="unitPrice">Cena jednostkowa produktu.</param>
+    public Product(string name, int quantity, double unitPrice)
+    {
+        Name = name;
+        Quantity = quantity;
+        UnitPrice = unitPrice;
+    }
+
+    /// <summary>
+    /// Oblicza całkowitą wartość produktu (ilość * cena jednostkowa).
+    /// </summary>
+    /// <returns>Wartość produktu.</returns>
+    public double GetValue() => Quantity * UnitPrice;
+}
+
+/// <summary>
+/// Główna klasa programu zawierająca system zarządzania magazynem.
+/// </summary>
+public class Program
+{
+    /// <summary>
+    /// Lista przechowująca wszystkie produkty w magazynie.
+    /// </summary>
+    private static List<Product> products = new List<Product>();
+
+    /// <summary>
+    /// Ścieżka do pliku JSON przechowującego dane o produktach.
+    /// </summary>
+    private static string filePath = "products.json";
+
+    /// <summary>
+    /// Główna metoda programu wyświetlająca menu i obsługująca wybór użytkownika.
+    /// </summary>
+    static void Main()
+
+    /// <summary>
+    /// Dodaje nowy produkt do magazynu.
+    /// Pobiera od użytkownika nazwę, ilość i cenę produktu.
+    /// </summary>
+    static void AddProduct()
+
+    /// <summary>
+    /// Usuwa produkt z magazynu na podstawie podanej nazwy.
+    /// </summary>
+    static void RemoveProduct()
+
+    /// <summary>
+    /// Wyświetla listę wszystkich produktów w magazynie.
+    /// Jeśli magazyn jest pusty, wyświetla odpowiedni komunikat.
+    /// </summary>
+    static void DisplayProducts()
+
+    /// <summary>
+    /// Aktualizuje dane istniejącego produktu.
+    /// Pozwala na zmianę ilości i ceny wybranego produktu.
+    /// </summary>
+    static void UpdateProduct()
+
+    /// <summary>
+    /// Oblicza i wyświetla całkowitą wartość wszystkich produktów w magazynie.
+    /// </summary>
+    static void CalculateWarehouseValue()
+
+    /// <summary>
+    /// Zapisuje aktualny stan magazynu do pliku JSON.
+    /// </summary>
+    static void SaveProducts()
+
+    /// <summary>
+    /// Wczytuje stan magazynu z pliku JSON.
+    /// Jeśli plik nie istnieje, tworzy nową pustą listę produktów.
+    /// </summary>
+    static void LoadProducts()
+}
